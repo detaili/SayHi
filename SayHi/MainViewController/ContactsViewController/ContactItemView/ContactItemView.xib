@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15400" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15400"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ContactItemView"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView identifier="contactitem" id="c22-O7-iKe" customClass="ContactItemView">
+            <rect key="frame" x="0.0" y="0.0" width="619" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="raH-zC-Gtw">
+                    <rect key="frame" x="20" y="7" width="44" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="LaT-fw-Nix"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="photo2" id="IhU-ok-u0l"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Ya-1d-KDY">
+                    <rect key="frame" x="70" y="28" width="546" height="22"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="name label" id="Hb6-YZ-UBq">
+                        <font key="font" metaFont="system" size="14"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aEj-1F-8du">
+                    <rect key="frame" x="72" y="7" width="529" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="W83-7R-Hd6"/>
+                    </constraints>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="ip:10.23.213.24 port:3241" id="wz2-S3-g4X">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="aEj-1F-8du" firstAttribute="leading" secondItem="raH-zC-Gtw" secondAttribute="trailing" constant="10" id="3AC-3z-Hpd"/>
+                <constraint firstAttribute="trailing" secondItem="aEj-1F-8du" secondAttribute="trailing" constant="20" symbolic="YES" id="7xP-A3-ys0"/>
+                <constraint firstAttribute="trailing" secondItem="0Ya-1d-KDY" secondAttribute="trailing" constant="5" id="8G9-77-mYn"/>
+                <constraint firstItem="raH-zC-Gtw" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="8" id="JaX-2t-QVm"/>
+                <constraint firstItem="0Ya-1d-KDY" firstAttribute="leading" secondItem="raH-zC-Gtw" secondAttribute="trailing" constant="8" symbolic="YES" id="Jp3-Js-wW8"/>
+                <constraint firstItem="raH-zC-Gtw" firstAttribute="bottom" secondItem="aEj-1F-8du" secondAttribute="bottom" id="PAY-rh-mld"/>
+                <constraint firstItem="aEj-1F-8du" firstAttribute="top" secondItem="0Ya-1d-KDY" secondAttribute="bottom" id="eUV-zX-DMd"/>
+                <constraint firstItem="raH-zC-Gtw" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" symbolic="YES" id="g1j-vH-wVq"/>
+                <constraint firstItem="0Ya-1d-KDY" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="10" id="kvU-lZ-wwh"/>
+                <constraint firstItem="raH-zC-Gtw" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="sgn-l4-P9i"/>
+            </constraints>
+            <connections>
+                <outlet property="addressLabelField" destination="aEj-1F-8du" id="bZv-hZ-ea6"/>
+                <outlet property="nameLabelField" destination="0Ya-1d-KDY" id="ozv-p1-ymR"/>
+                <outlet property="photoImageView" destination="raH-zC-Gtw" id="K66-Uy-0oT"/>
+            </connections>
+            <point key="canvasLocation" x="208.5" y="48"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="photo2" width="128" height="128"/>
+    </resources>
+</document>

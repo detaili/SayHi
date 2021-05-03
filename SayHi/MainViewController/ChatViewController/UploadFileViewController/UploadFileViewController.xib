@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15400" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15400"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="UploadFileViewController">
+            <connections>
+                <outlet property="backBtn" destination="Xw8-MH-aPo" id="Ats-8M-rW4"/>
+                <outlet property="filePathField" destination="CHT-wJ-FSb" id="m4U-nA-95P"/>
+                <outlet property="progressIndicator" destination="NTi-SS-ESg" id="5fB-fo-gG7"/>
+                <outlet property="sendBtn" destination="3qi-E9-W43" id="UeK-aZ-bE9"/>
+                <outlet property="statusLabel" destination="UhM-BZ-cCD" id="RdY-tg-2iF"/>
+                <outlet property="titleLabel" destination="E6J-yM-W5W" id="lTu-Zn-B50"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Xw8-MH-aPo">
+                    <rect key="frame" x="18" y="219" width="34" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="xQs-pr-xHO"/>
+                    </constraints>
+                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="NSGoLeftTemplate" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="sKe-hB-Txt">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                        <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                    </buttonCell>
+                    <connections>
+                        <action selector="backBtnAction:" target="-2" id="ceQ-7h-9ms"/>
+                    </connections>
+                </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E6J-yM-W5W">
+                    <rect key="frame" x="56" y="226" width="406" height="21"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Upload File" id="rtT-uz-mxC">
+                        <font key="font" metaFont="systemUltraLight" size="18"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="CHT-wJ-FSb">
+                    <rect key="frame" x="20" y="61" width="440" height="153"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="440" id="L05-Qe-bsO"/>
+                        <constraint firstAttribute="height" constant="153" id="hi4-ko-rB0"/>
+                    </constraints>
+                    <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="sKa-yq-ydg">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3qi-E9-W43">
+                    <rect key="frame" x="391" y="23" width="71" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="67" id="H1h-fz-mZ8"/>
+                        <constraint firstAttribute="height" constant="27" id="khK-su-vdU"/>
+                    </constraints>
+                    <buttonCell key="cell" type="bevel" title="Send" bezelStyle="regularSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ulX-ba-2gh">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                        <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                    </buttonCell>
+                    <connections>
+                        <action selector="sendBtnAction:" target="-2" id="7Gj-kg-VMx"/>
+                    </connections>
+                </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UhM-BZ-cCD">
+                    <rect key="frame" x="44" y="9" width="343" height="37"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="339" id="rth-AD-9da"/>
+                    </constraints>
+                    <textFieldCell key="cell" title="uploading..." id="aA9-9n-YVk">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <progressIndicator wantsLayer="YES" maxValue="100" displayedWhenStopped="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="NTi-SS-ESg">
+                    <rect key="frame" x="22" y="30" width="16" height="16"/>
+                </progressIndicator>
+            </subviews>
+            <constraints>
+                <constraint firstItem="CHT-wJ-FSb" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="Gnb-d2-LwH"/>
+                <constraint firstItem="Xw8-MH-aPo" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" symbolic="YES" id="Gtv-jw-19Y"/>
+                <constraint firstItem="NTi-SS-ESg" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="22" id="NrC-lc-etX"/>
+                <constraint firstItem="Xw8-MH-aPo" firstAttribute="leading" secondItem="CHT-wJ-FSb" secondAttribute="leading" id="Rez-mz-gAw"/>
+                <constraint firstAttribute="bottom" secondItem="3qi-E9-W43" secondAttribute="bottom" constant="26" id="Sbh-92-aqr"/>
+                <constraint firstItem="CHT-wJ-FSb" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="58" id="Uyc-EH-t1P"/>
+                <constraint firstItem="3qi-E9-W43" firstAttribute="top" secondItem="CHT-wJ-FSb" secondAttribute="bottom" constant="8" id="aWF-1P-ijU"/>
+                <constraint firstAttribute="trailing" secondItem="CHT-wJ-FSb" secondAttribute="trailing" constant="20" id="buT-zL-hPe"/>
+                <constraint firstItem="3qi-E9-W43" firstAttribute="trailing" secondItem="CHT-wJ-FSb" secondAttribute="trailing" id="gBw-NK-JCE"/>
+                <constraint firstItem="CHT-wJ-FSb" firstAttribute="top" secondItem="Xw8-MH-aPo" secondAttribute="bottom" constant="8" symbolic="YES" id="hR5-uz-5hc"/>
+                <constraint firstAttribute="bottom" secondItem="UhM-BZ-cCD" secondAttribute="bottom" constant="9" id="icO-aq-l48"/>
+                <constraint firstItem="NTi-SS-ESg" firstAttribute="top" secondItem="UhM-BZ-cCD" secondAttribute="top" id="loH-kx-9p0"/>
+                <constraint firstItem="UhM-BZ-cCD" firstAttribute="leading" secondItem="NTi-SS-ESg" secondAttribute="trailing" constant="8" symbolic="YES" id="nVo-gx-6ch"/>
+                <constraint firstItem="UhM-BZ-cCD" firstAttribute="firstBaseline" secondItem="3qi-E9-W43" secondAttribute="baseline" id="utz-Gd-9sm"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="154"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="NSGoLeftTemplate" width="9" height="12"/>
+    </resources>
+</document>

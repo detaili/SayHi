@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15400" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15400"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ChatListItem"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView identifier="chatlistitem" wantsLayer="YES" id="c22-O7-iKe" customClass="ChatListItem">
+            <rect key="frame" x="0.0" y="0.0" width="260" height="65"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bbP-HE-RNf">
+                    <rect key="frame" x="7" y="6" width="52" height="52"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" image="photo2" id="xuI-C3-rTe"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hy2-gj-0LC">
+                    <rect key="frame" x="73" y="0.0" width="167" height="27"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="last message label" id="Gr3-tv-oCN">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LaR-Hz-n0X">
+                    <rect key="frame" x="73" y="28" width="133" height="27"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Name Label" id="9mw-74-ZAV">
+                        <font key="font" metaFont="system" size="16"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RXn-lo-YwB">
+                    <rect key="frame" x="48" y="44" width="14" height="14"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <shadow key="shadow" blurRadius="2">
+                        <color key="color" name="windowFrameTextColor" catalog="System" colorSpace="catalog"/>
+                    </shadow>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="highlight_red_16px" id="JD6-Ks-k2s"/>
+                </imageView>
+            </subviews>
+            <connections>
+                <outlet property="lastMsgLabelField" destination="Hy2-gj-0LC" id="VPs-VD-rn7"/>
+                <outlet property="nameLabelField" destination="LaR-Hz-n0X" id="5w3-Jk-IUa"/>
+                <outlet property="photoImageView" destination="bbP-HE-RNf" id="lU3-PC-5PF"/>
+                <outlet property="unReadFlagIV" destination="RXn-lo-YwB" id="BZE-dh-4ep"/>
+            </connections>
+            <point key="canvasLocation" x="97" y="57.5"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="highlight_red_16px" width="16" height="16"/>
+        <image name="photo2" width="128" height="128"/>
+    </resources>
+</document>

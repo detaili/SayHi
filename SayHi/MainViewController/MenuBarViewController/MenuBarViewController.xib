@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15400" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15400"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="MenuBarViewController">
+            <connections>
+                <outlet property="configBtn" destination="Dp0-Vx-Nea" id="e4i-TS-IOz"/>
+                <outlet property="contactBtn" destination="NXN-Vt-jcs" id="UGh-6F-jvM"/>
+                <outlet property="msgBtn" destination="lT6-u0-zNO" id="3js-cX-u03"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView wantsLayer="YES" id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="70" height="480"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ry0-13-GiB">
+                    <rect key="frame" x="12" y="356" width="46" height="55"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="13" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="iMH-ll-CpM">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" placeholderIntrinsicWidth="35" placeholderIntrinsicHeight="35" verifyAmbiguity="off" translatesAutoresizingMaskIntoConstraints="NO" id="NXN-Vt-jcs">
+                    <rect key="frame" x="18" y="137" width="35" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Contacts_128" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="hmw-rj-qLJ">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="contactBtnAction:" target="-2" id="fGT-ce-37H"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" placeholderIntrinsicWidth="35" placeholderIntrinsicHeight="35" verifyAmbiguity="off" translatesAutoresizingMaskIntoConstraints="NO" id="Dp0-Vx-Nea">
+                    <rect key="frame" x="18" y="83" width="35" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Game_Center_128" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="L5x-dc-kkH">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="configBtnAction:" target="-2" id="GcM-pU-Vie"/>
+                    </connections>
+                </button>
+                <button horizontalHuggingPriority="75" verticalHuggingPriority="75" horizontalCompressionResistancePriority="75" verticalCompressionResistancePriority="75" fixedFrame="YES" placeholderIntrinsicWidth="35" placeholderIntrinsicHeight="35" verifyAmbiguity="off" translatesAutoresizingMaskIntoConstraints="NO" id="lT6-u0-zNO">
+                    <rect key="frame" x="18" y="195" width="35" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Messages_128" imagePosition="overlaps" alignment="center" controlSize="small" imageScaling="proportionallyUpOrDown" inset="2" id="IgS-sd-dDh">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="msgBtnAction:" target="-2" id="cHj-bH-6JC"/>
+                    </connections>
+                </button>
+            </subviews>
+            <point key="canvasLocation" x="137" y="154"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="13" width="72" height="72"/>
+        <image name="Contacts_128" width="128" height="128"/>
+        <image name="Game_Center_128" width="128" height="128"/>
+        <image name="Messages_128" width="128" height="128"/>
+    </resources>
+</document>
